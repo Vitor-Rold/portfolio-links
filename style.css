@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #0d1117;
+  color: #e6edf3;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(88, 166, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(88, 166, 255, 0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 700px;
+  padding: 40px 24px;
+}
+
+.avatar-wrapper {
+  padding: 3px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #58a6ff, #1f6feb, #0d1117, #58a6ff);
+  background-size: 300% 300%;
+  animation: gradientSpin 4s ease infinite;
+}
+
+@keyframes gradientSpin {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  border: 3px solid #0d1117;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #e6edf3;
+}
+
+.bio {
+  font-size: 0.88rem;
+  color: #8b949e;
+  text-align: justify;
+  line-height: 1.6;
+  max-width: 680px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 480px;
+  margin-top: 4px;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #21262d;
+}
+
+.divider span {
+  font-size: 0.7rem;
+  color: #484f58;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 480px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 14px 20px;
+  background: #161b22;
+  color: #e6edf3;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 1px solid #30363d;
+  transition: background 0.2s, transform 0.1s, border-color 0.2s;
+}
+
+.btn:hover {
+  background: #1f2937;
+  border-color: #58a6ff;
+  transform: translateY(-2px);
+}
+
+.btn.project {
+  border-left: 3px solid #58a6ff;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
