@@ -145,3 +145,32 @@ h1 {
   height: 20px;
   flex-shrink: 0;
 }
+
+@media (max-width: 500px) {
+  .container {
+    padding: 32px 16px;
+    gap: 14px;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  .bio {
+    font-size: 0.85rem;
+    max-width: 100%;
+  }
+
+  .links {
+    max-width: 100%;
+  }
+
+  .divider {
+    max-width: 100%;
+  }
+
+  .btn {
+    font-size: 0.88rem;
+    padding: 13px 16px;
+  }
+}
